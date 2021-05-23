@@ -12,10 +12,11 @@
 
 ## API Endpoints
 
-| Endpoint       | Functionality                       |
-| -------------- | ----------------------------------- |
-| GET `/`        | Get latest news from Newsapi        |
-| POST `/search` | Search particular news from NewsApi |
+| Endpoint            | Functionality                                   |
+| ------------------- | ----------------------------------------------- |
+| GET `/`             | Get latest news from Newsapi                    |
+| POST `/search`      | Search particular news from NewsApi             |
+| POST `/category?q=` | Select particular category of news from NewsApi |
 
 ## Setup and Build
 
