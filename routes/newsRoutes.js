@@ -8,7 +8,7 @@ import {
 
 // routes
 router.get("/", fetchAllNews);
-router.get("/:category", fetchCategoryNews);
+router.get("/category", fetchCategoryNews);
 router.post("/search", searchNews);
 
 export default router;

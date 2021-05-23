@@ -25,10 +25,10 @@ export const fetchAllNews = async (req, res) => {
 
 //  @purpose: fetch all news by category
 //  @access:  Public
-//  @route:   GET /:category
+//  @route:   GET /
 
 export const fetchCategoryNews = async (req, res) => {
-  const category = req.params.category;
+  const category = req.query.q;
 
   try {
     var url =
