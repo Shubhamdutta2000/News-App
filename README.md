@@ -2,7 +2,7 @@
 
 > Develop a simple News app with the help of NodeJS , Express , EJS and bootstrap with Newsapi
 
-![screenshot](https://github.com/Shubhamdutta2000/News-App/screenshot/image.png)
+![screenshot](https://github.com/Shubhamdutta2000/News-App/blob/main/screenshot/image.PNG)
 
 ## Features
 
@@ -46,4 +46,4 @@ axios
 newsapi
 ```
 
-### [Preview]()
+### [Preview](https://s-news-app.herokuapp.com/)
