@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital@1&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/style.css">
+        <style>
+            .form-control{
+                border-color: rgb(0, 183, 255);
+            }
+        </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top fixed-top">
+        <a class="navbar-brand" href="/" style="font-weight: 700;
+        font-size: 24px;"> <span style="color: rgb(0, 196, 245);" >X</span>-news</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse searc-bar" id="navbarSupportedContent">     
+            <form class="form-inline my-2 my-lg-0" action="/search" method="POST">
+                <input class="form-control mr-sm-2"  name="search" type="search" placeholder="Search" style="width: 522px;"
+                    aria-label="Search">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+  
+    <div class="news-container ">
+        <div class="d-flex justify-content-center">
+            <a class="mr-2" href="/business" >
+                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Business</button>
+            </a>
+
+            <a class=" mr-2" href="/entertainment" >
+                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Entertainment</button>
+            </a>
+
+            <a class="mr-2" href="/health" >
+                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Health</button>
+            </a>
+
+            <a class="mr-2" href="/science" >
+                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Science</button>
+            </a>
+
+            <a class="mr-2" href="/sports" >
+                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Sports</button>
+            </a>
+
+            <a class="mr-2" href="/technology" >
+                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Technology</button>
+            </a>
+        </div>
+           
+            <br/>
+            <br/>
+
+            <div class="news ">
+
+                <% articles.forEach(function(article,index){ %>
+
+                <a href="<%= article.url %>" target="_blank" class="news-box Hover-effect">
+                    <img src="<%= article.urlToImage %>" alt="Image">
+                    <h3>
+                        <%= article.title %>
+                    </h3>
+                    <p>
+                        <%= article.content %>
+                    </p>
+                    <br>
+                    <p style="margin-bottom: 0px; position: absolute; right: 0; bottom: 0; font-family: ui-monospace;">
+                        Updated:
+                        <span style="color:rgb(101, 74, 255);" >
+                            <%= new Date(article.publishedAt.slice(0,10)).toDateString() %>    
+                        </span>
+                    </p>
+                </a>
+            <% }) %>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
